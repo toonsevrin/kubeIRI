@@ -4,5 +4,4 @@ if [ -z "$NEIGHBORS" ]; then
     exit 1
 fi  
 
-
 exec java -XX:+DisableAttachMechanism -Xmx4g -Xms4g -jar /iri/target/iri-1.2.2.jar -p 14265 -u 14800 -t 15600 -n "$NEIGHBORS" --remote --remote-limit-api "addNeighbors, removeNeighbors" "$@"
